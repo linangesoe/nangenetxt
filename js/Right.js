@@ -85,7 +85,7 @@ let isFullScreen = false;
         };
 
         var image = document.createElement("img");
-        image.src = "./assets/ngwx.webp";
+        image.src = "https://lm.nangesoe.cn/nangebj/gzh/ngwxh.png";
         image.style.position = "absolute";
         image.style.top = "50%";
         image.style.left = "50%";
@@ -93,6 +93,32 @@ let isFullScreen = false;
         image.style.maxWidth = "90%";
         image.style.maxHeight = "90%";
 
+        overlay.appendChild(image);
+        document.body.appendChild(overlay);
+    }
+	
+    function showImageo() {
+        var overlay = document.createElement("div");
+        overlay.style.position = "fixed";
+        overlay.style.top = "0";
+        overlay.style.left = "0";
+        overlay.style.width = "100%";
+        overlay.style.height = "100%";
+        overlay.style.backgroundColor = "rgba(0, 0, 0, 0.5)";
+        overlay.style.zIndex = "9999";
+        overlay.onclick = function() {
+            document.body.removeChild(overlay);
+        };
+    
+        var image = document.createElement("img");
+        image.src = "https://lm.nangesoe.cn/nangebj/gzh/nangeshuo.jpg";
+        image.style.position = "absolute";
+        image.style.top = "50%";
+        image.style.left = "50%";
+        image.style.transform = "translate(-50%, -50%)";
+        image.style.maxWidth = "90%";
+        image.style.maxHeight = "90%";
+    
         overlay.appendChild(image);
         document.body.appendChild(overlay);
     }
